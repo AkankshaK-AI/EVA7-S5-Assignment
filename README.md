@@ -49,19 +49,23 @@ Model is under-fitting now. This could be due to 2 factors:
 **Step 3:**
 
 Target:
-1) Increase parameters slightly(around 10k) to improve model performance
+1) Fix underfitting by:
+(a) Increasing parameters slightly(around 10k) to improve model performance
+(b) Work on the regularization techniques to fix underfitting
+
 2) Perform Max Pooling at RF=5
 
 
 Results:
 Parameters: 10,790
-Best Training Accuracy: 98.94
-Best Test Accuracy: 99.30
+Best Training Accuracy: 99.55(accuracy improved than last time)
+Best Test Accuracy: 99.34 (accuracy improved)
 
 Analysis:
-Parameters are increased.
-Model is still under-fitting. 
-Seeing image samples, we can see that we can add slight rotation. 
+Parameters have increased(6k to 10k).
+Model is performing better- Accuracy has improved and under-fitting has been fixed. 
+Correcting the Max Pooling location also helped with the model performance.
+To further improve accuracy, looking at the image samples, we can add slight rotation. 
 
 
 
@@ -69,29 +73,15 @@ Seeing image samples, we can see that we can add slight rotation.
 **Step 4:**
 
 Target:
-1) To perform image augmentation
-2) To include Step LR
-3) To improve model performance to fix underfitting
+To perform image augmentation to further improve model performance
 
 
 Results:
 Parameters: 10,790(image augmentation doesnt add parameters)
-Best Training Accuracy: 99.33(epoch 14th)
-Best Test Accuracy: 99.40(epoch 11th)
+Best Training Accuracy: 99.34
+Best Test Accuracy: 99.40(epoch 7th), 99.41(epoch 12th), 99.44(epoch 13th)
 
 Analysis:
-(1) Dropout was removed to improve model performance. Removing it helped!
-Tried retaining **Dropout** and tweaking the LR at the below:
-(a) 0.01(best train 98.91, test 99.31 thrice- underfitting w/o reaching target even once)
-(b) 0.02(best train 98.85, test 99.36 - underfitting w/o reaching target even once)
-(c) 0.03(best train 98.94, test 99.33 - underfitting w/o reaching target even once)
-None of the LRs seemed to work. Removing the Dropout improved underfitting.
-
-(2) Adding LR step didnt help the accuracy. Tried with the following LRs at step LR 6:
-(a) LR 0.01 (best train 98.92, test 99.37 - underfitting w/o reaching target even once)
-(b) LR 0.02 (best train 98.90, test 99.46 - underfitting with reaching target once at 14th epoch)
-The model was underfitting and the loss and accuracy graphs looked inconsistent hence Step LR was dropped. 
-
-
-(3) After dropping Step LR and Dropout, the Model performance has improved. We have acchieved our target of 99.4% with no underfitting.
-Train and Test accuracy gap has reduced drastically hence model is working!   
+With image augmentation, Model performance has improved drastically. It hit the target accuracy 3 times with 2 times consistently.
+Train and Test accuracy gap has narrowed hence model is working! 
+We will try the Step LR and see  if the performance improves further
