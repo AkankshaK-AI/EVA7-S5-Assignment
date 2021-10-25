@@ -85,3 +85,19 @@ Analysis:
 With image augmentation, Model performance has improved drastically. It hit the target accuracy 3 times with 2 times consistently.
 Train and Test accuracy gap has narrowed hence model is working! 
 We will try the Step LR and see  if the performance improves further
+
+
+**Step 5:**
+
+Target:
+To add StepLR to the model to see if it further improves the accuracy making it more consistent in the last few epochs
+
+
+Results:
+Parameters: 10,790(StepLR doesnt add parameters)
+Best Training Accuracy: 99.32(lesser than the step 3)
+Best Test Accuracy: 99.41(epoch 10th), 99.40(epoch 13th)
+
+Analysis:
+StepLR hasnt improved the model any further with it hitting the taregt accuracy only 2 times as opposed to 3 times in the step 3. 
+The Train and Test accuracy is still narrow in the last few epochs. 
