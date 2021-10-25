@@ -2,12 +2,12 @@
 Have created a Neural Network model with 99.4% accuracy utilizing all the basic steps of Regularization(Batch Norm, Dropout, GAP), Image augmentation and LR
 
 **Step 1:**
-Target
-Get the set-up right
-Set Transforms
-Set Data Loader
-Set Basic Working Code
-Set Basic Training  & Test Loop
+Target:
+1) Get the set-up right
+2) Set Transforms
+3) Set Data Loader
+4) Set Basic Working Code
+5) Set Basic Training  & Test Loop
 
 Results:
 Parameters: 194,884
@@ -15,16 +15,16 @@ Best Training Accuracy: 99.29
 Best Test Accuracy: 98.98
 
 Analysis:
-A large model.
-Model is over-fitting
+A large model with more than 150k parameters
+Model is over-fitting. Train accuracy is more than Test
 
 
 **Step 2:**
 
-Target
-Reduce parameters as it was a large model.
-Include regularization techniques to reduce overfitting
-To reduce the size of the big kernel
+Target:
+1) Reduce parameters as it is a large model.
+2) Include regularization techniques to reduce overfitting
+3) To reduce the size of the big kernel which will help in reducing the parameters
 
 
 Results:
@@ -34,15 +34,15 @@ Best Test Accuracy: 98.60(12th epoch)
 
 Analysis:
 Parameters are reduced.
-Model is under-fitting. Since the parameters are reduced drastically, we see the model performance impacted.
+Model is under-fitting. Since the parameters are reduced drastically(from 194k to 6k), we see the model performance impacted.
 
 
 
 **Step 3:**
 
-Target
-Increase parameters to improve model performance
-Perform Max Pooling at RF=5
+Target:
+1) Increase parameters slightly(around 10k) to improve model performance
+2) Perform Max Pooling at RF=5
 
 
 Results:
@@ -60,9 +60,9 @@ Seeing image samples, we can see that we can add slight rotation.
 
 **Step 4:**
 
-Target
-To perform image augmentation
-To improve model performance to fix underfitting
+Target:
+1) To perform image augmentation
+2) To improve model performance to fix underfitting
 
 
 Results:
