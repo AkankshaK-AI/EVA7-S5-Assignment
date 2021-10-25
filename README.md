@@ -62,7 +62,8 @@ Seeing image samples, we can see that we can add slight rotation.
 
 Target:
 1) To perform image augmentation
-2) To improve model performance to fix underfitting
+2) To include Step LR
+3) To improve model performance to fix underfitting
 
 
 Results:
@@ -71,6 +72,18 @@ Best Training Accuracy: 99.33(epoch 14th)
 Best Test Accuracy: 99.40(epoch 11th)
 
 Analysis:
-Dropout was dropped to improve model performance. Removing it helped!
-Model performance is good. We have acchieved our target of 99.4%. 
-Train and Test accuracy gap has reduced drastically hence model is a good one!  
+(1) Dropout was removed to improve model performance. Removing it helped!
+Tried retaining **Dropout** and tweaking the LR at the below:
+(a) 0.01(best train 98.91, test 99.31 thrice- underfitting w/o reaching target even once)
+(b) 0.02(best train 98.85, test 99.36 - underfitting w/o reaching target even once)
+(c) 0.03(best train 98.94, test 99.33 - underfitting w/o reaching target even once)
+None of the LRs seemed to work. Removing the Dropout improved underfitting.
+
+(2) Adding LR step didnt help the accuracy. Tried with the following LRs at step LR 6:
+(a) LR 0.01 (best train 98.92, test 99.37 - underfitting w/o reaching target even once)
+(b) LR 0.02 (best train 98.90, test 99.46 - underfitting with reaching target once at 14th epoch)
+The model was underfitting and the loss and accuracy graphs looked inconsistent hence Step LR was dropped. 
+
+
+(3) After dropping Step LR and Dropout, the Model performance has improved. We have acchieved our target of 99.4% with no underfitting.
+Train and Test accuracy gap has reduced drastically hence model is working!   
