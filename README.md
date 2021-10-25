@@ -15,16 +15,18 @@ Best Training Accuracy: 99.29
 Best Test Accuracy: 98.98
 
 Analysis:
-A large model with more than 150k parameters
-Model is over-fitting. Train accuracy is more than Test
+A large model with more than 194k parameters.
+A large kernel(7*7) is used in the 8th convolution layer(FC) which is contributing towards the large parameters.
+Model is over-fitting. Train accuracy is more than Test.
+
 
 
 **Step 2:**
 
 Target:
-1) Reduce parameters as it is a large model.
-2) Include regularization techniques to reduce overfitting
-3) To reduce the size of the big kernel which will help in reducing the parameters
+1) Reduce the number of parameters as it is a large model.
+2) Reduce the size of the big kernel which will help in reducing the parameters
+3) Include regularization techniques to reduce overfitting
 
 
 Results:
@@ -33,8 +35,14 @@ Best Training Accuracy: 98.33(14th epoch)
 Best Test Accuracy: 98.60(12th epoch)
 
 Analysis:
-Parameters are reduced.
-Model is under-fitting. Since the parameters are reduced drastically(from 194k to 6k), we see the model performance impacted.
+Parameters are reduced from 194k to 6k resulting from:
+(a)Reducing the parameters in the convoltuion layers
+(b)Using a Gap layer at the end which helped reduce the kernel size of 7*7. 
+This helped in reducing the model parameters. 
+
+Model is under-fitting now. This could be due to 2 factors:
+(a) Since the parameters are reduced drastically(from 194k to 6k), the model performance may have been impacted.
+(b) The regularization techniques implemented of Batch Norm and Dropout may be causing the underfitting. We shall see in the next steps.
 
 
 
