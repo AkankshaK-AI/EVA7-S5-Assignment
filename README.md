@@ -1,5 +1,5 @@
 # EVA7-S5-Assignment
-Have created a Neural Network model with 99.4% accuracy utilizing all the basic steps of Regularization(Batch Norm, Dropout, GAP), Image augmentation and LR
+Have created a Neural Network model with 99.4% accuracy utilizing all the basic steps of Regularization(Batch Norm, Dropout, GAP), Image augmentation and StepLR
 
 **Step 1:**
 Target:
@@ -82,9 +82,9 @@ Best Training Accuracy: 99.34
 Best Test Accuracy: 99.40(epoch 7th), 99.41(epoch 12th), 99.44(epoch 13th)
 
 Analysis:
-With image augmentation, Model performance has improved drastically. It hit the target accuracy 3 times with 2 times consistently.
+With image augmentation, Model performance has improved drastically. It hit the target accuracy 3 times overall with 2 times consistently(epoch 12th and 13th).
 Train and Test accuracy gap has narrowed hence model is working! 
-We will try the Step LR and see  if the performance improves further
+We will try the Step LR and see  if the performance improves any further
 
 
 **Step 5:**
@@ -100,4 +100,4 @@ Best Test Accuracy: 99.41(epoch 10th), 99.40(epoch 13th)
 
 Analysis:
 StepLR hasnt improved the model any further with it hitting the taregt accuracy only 2 times as opposed to 3 times in the step 3. 
-The Train and Test accuracy is still narrow in the last few epochs. 
+The Train and Test accuracy gap is still narrow in the last few epochs. 
