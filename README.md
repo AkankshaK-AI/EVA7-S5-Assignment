@@ -99,5 +99,5 @@ Best Training Accuracy: 99.32(lesser than the step 3)
 Best Test Accuracy: 99.41(epoch 10th), 99.40(epoch 13th)
 
 Analysis:
-StepLR hasnt improved the model any further with it hitting the taregt accuracy only 2 times as opposed to 3 times in the step 3. 
-The Train and Test accuracy gap is still narrow in the last few epochs. 
+StepLR hasnt improved the model any further with it hitting the taregt accuracy only 2 times as opposed to 3 times in step 3. 
+The Train and Test accuracy gap is still narrow in the last few epochs. Hence StepLR didnt help much to further improve the model performance.
