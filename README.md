@@ -1,7 +1,7 @@
 # EVA7-S5-Assignment
 Have created a Neural Network model with 99.4% accuracy utilizing all the basic steps of Regularization(Batch Norm, Dropout, GAP), Image augmentation and LR
 
-step 1:
+**Step 1:**
 Target
 Get the set-up right
 Set Transforms
@@ -19,7 +19,8 @@ A large model.
 Model is over-fitting
 
 
-Step2:
+**Step 2:**
+
 Target
 Reduce parameters as it was a large model.
 Include regularization techniques to reduce overfitting
@@ -37,7 +38,8 @@ Model is under-fitting. Since the parameters are reduced drastically, we see the
 
 
 
-Step3:
+**Step 3:**
+
 Target
 Increase parameters to improve model performance
 Perform Max Pooling at RF=5
@@ -56,7 +58,8 @@ Seeing image samples, we can see that we can add slight rotation.
 
 
 
-Step4:
+**Step 4:**
+
 Target
 To perform image augmentation
 To improve model performance to fix underfitting
